@@ -3,5 +3,5 @@ $LOAD_PATH.unshift(
   "#{__dir__}/../lib"
 )
 
-require 'jakdlugo/cli'
+require 'jakdlugo'
 Jakdlugo::CLI.new.run(ARGV)
