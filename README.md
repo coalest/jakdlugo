@@ -1,8 +1,11 @@
 # Jakdlugo
 
-A simple command line tool for Launch School students. A common question students have is "How long does Launch School take?". To answer this question, there is a post in the LS forums where students answer how long the Core curriculum took for them. This gem includes the data from that forum post, and provides a few commands to summarize that information.
+This gem is a simple command line tool for Launch School students to estimate how long the Core curriculum will take.
 
-The original name for this gem was taken "howlong", so I translated it to Polish.
+## How it works
+A common question students have is "How long does Launch School take?", so there is a post in the LS forums where students answer how long LS took for them. This gem takes the data from that forum post, creates a Postgres database and provides a few subcommands that query that database.
+
+The original name for this gem "howlong" was taken, so I translated it to Polish.
 
 ## Installation
 
@@ -11,6 +14,8 @@ Install it with:
     $ gem install jakdlugo
 
 ## Usage
+
+Get general usage information:
 
     $ jakdlugo --help
 
@@ -25,7 +30,7 @@ Commands:
 -p, --progress [TRACK] [COURSE] :Show your progress to finishing Core
 ```
 
-Get information on a specific course:
+Get data on a specific course:
 
     $ jakdlugo -c rb101
 ```
@@ -33,18 +38,25 @@ Get information on a specific course:
     Average number of study hours to complete: 187
     Data points (n=12): 78, 102, 109, 114, 127, 149, 165, 190, 233, 282, 307, 382
 ```
-Get information on your progress:
+Get data on your progress:
 
     $ jakdlugo -p js ls215
 
 `When you finish LS215/LS216, you will be approx. 80% done with Core!`
 
-Get information on the entire ruby or javascript track:
+Get data on a track (ruby or javascript):
 
-    $ jakdlugo -p js ls215
+    $ jakdlugo -t ruby
 
-`When you finish LS215/LS216, you will be approx. 80% done with Core!`
-
+```
+   Course    | Average number | Percent of
+             |    of hours    | total time
+-------------|----------------|------------
+ LS95        |       23       |    1.8
+ RB100       |       43       |    3.4
+ RB101/RB109 |       187      |    14.6
+............................................
+```
 ## To Do
 
 - [ ] Write tests!
@@ -53,6 +65,7 @@ Get information on the entire ruby or javascript track:
 
 ## Contributing
 
+Please contribute!
 
 ## License
 
