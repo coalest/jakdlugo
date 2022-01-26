@@ -1,4 +1,7 @@
 #! /usr/bin/env ruby
-require_relative File.expand_path(File.dirname(__FILE__) + "/../lib/jakdlugo/cli")
+$LOAD_PATH.unshift(
+  "#{__dir__}/../lib"
+)
 
-Jakdlugo::CLI.new.start(ARGV)
+require 'jakdlugo/cli'
+Jakdlugo::CLI.new.run(ARGV)

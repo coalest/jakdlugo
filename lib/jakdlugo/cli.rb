@@ -6,7 +6,7 @@ module Jakdlugo
       @app = CourseData.new
     end
 
-    def start(args)
+    def run(args)
       subcommand, first_arg, second_arg = args.map(&:downcase)
 
       case subcommand
