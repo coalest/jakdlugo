@@ -30,6 +30,7 @@ class CourseData
     hash = track_info(track).map { |course, _, percent| [course, percent] }.to_h
     course = ASSESSMENTS.key(course) if ASSESSMENTS.values.include?(course)
     you_are_here = hash.keys.index(course)
+    return display_bad_course_error unless you_are_here
     percent = hash.values[0..you_are_here].reduce(:+).round
 
     display_progress_summary(course, percent)

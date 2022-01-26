@@ -39,4 +39,8 @@ module Helpers
   def has_assessment?(course)
     ASSESSMENTS.include?(course)
   end
+
+  def display_bad_course_error
+    puts "That course isn't in that track, try a different one."
+  end
 end
