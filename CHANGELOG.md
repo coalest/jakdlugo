@@ -1,5 +1,10 @@
 ## [Unreleased]
 
+## [0.3.0] - 2022-01-26
+
+- Updated README
+- Fixed bug in --progress feature that returned 100%
+
 ## [0.2.0] - 2022-01-26
 
 - Added cli exe

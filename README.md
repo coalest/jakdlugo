@@ -1,43 +1,59 @@
 # Jakdlugo
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/jakdlugo`. To experiment with that code, run `bin/console` for an interactive prompt.
+A simple command line tool for Launch School students. A common question students have is "How long does Launch School take?". To answer this question, there is a post in the LS forums where students answer how long the Core curriculum took for them. This gem includes the data from that forum post, and provides a few commands to summarize that information.
 
-TODO: Delete this and the text above, and describe your gem
+The original name for this gem was taken "howlong", so I translated it to Polish.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'jakdlugo'
-```
-
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
+Install it with:
 
     $ gem install jakdlugo
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ jakdlugo --help
 
-## Development
+```
+A command line tool to estimate how long courses at Launch School
+will take.
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Commands:
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+-c, --course [COURSE]           :Show data about a specific course
+-t, --track [TRACK]             :Show data about ruby or javascript track
+-p, --progress [TRACK] [COURSE] :Show your progress to finishing Core
+```
+
+Get information on a specific course:
+
+    $ jakdlugo -c rb101
+```
+    Course: RB101/RB109
+    Average number of study hours to complete: 187
+    Data points (n=12): 78, 102, 109, 114, 127, 149, 165, 190, 233, 282, 307, 382
+```
+Get information on your progress:
+
+    $ jakdlugo -p js ls215
+
+`When you finish LS215/LS216, you will be approx. 80% done with Core!`
+
+Get information on the entire ruby or javascript track:
+
+    $ jakdlugo -p js ls215
+
+`When you finish LS215/LS216, you will be approx. 80% done with Core!`
+
+## To Do
+
+- [ ] Write tests!
+- [ ] Add feature to estimate remaining number of hours for a student.
+- [ ] Improve the formatting of outputs.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/jakdlugo. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/jakdlugo/blob/main/CODE_OF_CONDUCT.md).
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Jakdlugo project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/jakdlugo/blob/main/CODE_OF_CONDUCT.md).
