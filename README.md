@@ -60,9 +60,11 @@ Install it with:
 
     $ gem install jakdlugo
 
+Note: If you use `rbenv` as a Ruby version manager, you may need to run `rbenv rehash` to update your `shims` directory.
+
 ## To Do
 
-- [ ] Write tests!
+- [ ] Write tests.
 - [ ] Add feature to estimate remaining number of hours for a student.
 - [ ] Improve the formatting of outputs.
 
