@@ -178,18 +178,18 @@ INSERT INTO public.hours VALUES (9, 2, 10, 130);
 INSERT INTO public.hours VALUES (10, 2, 11, 134);
 INSERT INTO public.hours VALUES (11, 2, 13, 72);
 INSERT INTO public.hours VALUES (12, 2, 14, 175);
-INSERT INTO public.hours VALUES (13, 3, 3, 109);
-INSERT INTO public.hours VALUES (14, 3, 4, 129);
-INSERT INTO public.hours VALUES (15, 3, 5, 139);
-INSERT INTO public.hours VALUES (16, 3, 6, 171);
+INSERT INTO public.hours VALUES (13, 3, 3, 187);
+INSERT INTO public.hours VALUES (14, 3, 4, 87);
+INSERT INTO public.hours VALUES (15, 3, 5, 114);
+INSERT INTO public.hours VALUES (16, 3, 6, 16);
 INSERT INTO public.hours VALUES (17, 3, 7, 95);
-INSERT INTO public.hours VALUES (18, 3, 8, 181);
+INSERT INTO public.hours VALUES (18, 3, 8, 40);
 INSERT INTO public.hours VALUES (19, 3, 9, 28);
-INSERT INTO public.hours VALUES (20, 3, 10, 209);
-INSERT INTO public.hours VALUES (21, 3, 11, 211);
-INSERT INTO public.hours VALUES (22, 3, 12, 216);
-INSERT INTO public.hours VALUES (23, 3, 13, 229);
-INSERT INTO public.hours VALUES (24, 3, 14, 239);
+INSERT INTO public.hours VALUES (20, 3, 10, 78);
+INSERT INTO public.hours VALUES (21, 3, 11, 66);
+INSERT INTO public.hours VALUES (22, 3, 12, 75);
+INSERT INTO public.hours VALUES (23, 3, 13, 73);
+INSERT INTO public.hours VALUES (24, 3, 14, 212);
 INSERT INTO public.hours VALUES (25, 4, 3, 78);
 INSERT INTO public.hours VALUES (26, 4, 4, 91);
 INSERT INTO public.hours VALUES (27, 4, 5, 58);
@@ -356,6 +356,7 @@ INSERT INTO public.hours VALUES (193, 19, 11, 186);
 INSERT INTO public.hours VALUES (194, 19, 12, 150);
 INSERT INTO public.hours VALUES (195, 19, 13, 169);
 INSERT INTO public.hours VALUES (196, 19, 14, 276);
+INSERT INTO public.hours VALUES (197, 12, 2, 40);
 
 
 --
@@ -394,7 +395,7 @@ SELECT pg_catalog.setval('public.courses_id_seq', 63, true);
 -- Name: hours_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.hours_id_seq', 196, true);
+SELECT pg_catalog.setval('public.hours_id_seq', 197, true);
 
 
 --
