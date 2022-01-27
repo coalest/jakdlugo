@@ -1,17 +1,11 @@
 # Jakdlugo
 
-This gem is a simple command line tool for Launch School students to estimate how long the Core curriculum will take.
+This gem is a simple command line tool for Launch School students to estimate how long the curriculum will take.
 
 ## How it works
-A common question students have is "How long does Launch School take?", so there is a post in the LS forums where students answer how long LS took for them. This gem takes the data from that forum post, creates a Postgres database and provides a few subcommands that query that database.
+A common question LS students have is "How long does Launch School take?", so there is a post in the forums where students answer how long it took for them. This gem takes the data from that forum post, loads it into a Postgres database and provides a few subcommands that query that database.
 
-The original name for this gem "howlong" was taken, so I translated it to Polish.
-
-## Installation
-
-Install it with:
-
-    $ gem install jakdlugo
+The original name for this gem "how long" was taken, so "jak długo" is the Polish translation.
 
 ## Usage
 
@@ -44,7 +38,7 @@ Get data on your progress:
 
 `When you finish LS215/LS216, you will be approx. 80% done with Core!`
 
-Get data on a track (ruby or javascript):
+Get data on an LS track:
 
     $ jakdlugo -t ruby
 
@@ -55,8 +49,17 @@ Get data on a track (ruby or javascript):
  LS95        |       23       |    1.8
  RB100       |       43       |    3.4
  RB101/RB109 |       187      |    14.6
-............................................
+...
+...
+...
 ```
+
+## Installation
+
+Install it with:
+
+    $ gem install jakdlugo
+
 ## To Do
 
 - [ ] Write tests!
