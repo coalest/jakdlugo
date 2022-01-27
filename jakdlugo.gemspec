@@ -6,7 +6,6 @@ Gem::Specification.new do |spec|
   spec.name = "jakdlugo"
   spec.version = Jakdlugo::VERSION
   spec.authors = ["coalest"]
-  spec.email = ["c.streiff@pm.me"]
 
   spec.summary = "CLI tool for Launch School students to estimate course times"
   spec.homepage = "https://github.com/coalest/jakdlugo"
