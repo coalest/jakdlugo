@@ -11,9 +11,9 @@ The original name for this gem "how long" was taken, so "jak długo" is the Poli
 
 Get general usage information:
 
-    $ jakdlugo --help
-
 ```
+$ jakdlugo --help
+
 A command line tool to estimate how long courses at Launch School
 will take.
 
@@ -26,23 +26,26 @@ Commands:
 
 Get data on a specific course:
 
-    $ jakdlugo -c rb101
 ```
-    Course: RB101/RB109
-    Average number of study hours to complete: 187
-    Data points (n=12): 78, 102, 109, 114, 127, 149, 165, 190, 233, 282, 307, 382
+$ jakdlugo -c rb101
+
+Course: RB101/RB109
+Average number of study hours to complete: 187
+Data points (n=12): 78, 102, 109, 114, 127, 149, 165, 190, 233, 282, 307, 382
 ```
 Get data on your progress:
 
-    $ jakdlugo -p js ls215
+```
+$ jakdlugo -p js ls215
 
-`When you finish LS215/LS216, you will be approx. 80% done with Core!`
+When you finish LS215/LS216, you will be approx. 80% done with Core!
+```
 
 Get data on an LS track:
 
-    $ jakdlugo -t ruby
-
 ```
+$ jakdlugo -t ruby
+
    Course    | Average number | Percent of
              |    of hours    | total time
 -------------|----------------|------------
