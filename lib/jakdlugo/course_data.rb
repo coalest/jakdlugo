@@ -61,9 +61,9 @@ class CourseData
     num_tables = query(sql).getvalue(0, 0).to_i
     return if num_tables >= 3
 
-    file_path = File.dirname(__FILE__) + "/course_data.sql"
+    file_path = File.dirname(__FILE__) + "/../../course_data.sql"
     setup_sql = File.read(file_path)
-    query(setup_sql)
+    @connection.exec(setup_sql)
   end
 
   # Wrapper method for database queries
