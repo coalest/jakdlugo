@@ -64,6 +64,8 @@ class CourseData
     file_path = File.dirname(__FILE__) + "/../../course_data.sql"
     setup_sql = File.read(file_path)
     @connection.exec(setup_sql)
+    puts "Loading database..."
+    sleep(3)
   end
 
   # Wrapper method for database queries
