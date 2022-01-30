@@ -74,8 +74,8 @@ class CourseData
   # Returns an array of reported hours for a course
   def course_info(course)
     sql = <<~SQL
-      SELECT round(h.hours) AS hours FROM hours AS h
-      JOIN courses AS c ON c.id = h.course_id WHERE c.name = $1;
+      SELECT round(h.hours) AS hours FROM public.hours AS h
+      JOIN public.courses AS c ON c.id = h.course_id WHERE c.name = $1;
     SQL
 
     result = query(sql, course)
@@ -98,9 +98,9 @@ class CourseData
   def avg_course_hours(track)
     sql = <<~SQL
       SELECT c.name, round(avg(h.hours)) AS avg,
-      round(avg(h.hours) / $1 * 100, 1) AS percent FROM hours AS h
-      JOIN courses AS c ON c.id = h.course_id
-      JOIN students AS s ON h.student_id = s.id
+      round(avg(h.hours) / $1 * 100, 1) AS percent FROM public.hours AS h
+      JOIN public.courses AS c ON c.id = h.course_id
+      JOIN public.students AS s ON h.student_id = s.id
       WHERE s.track = $2 GROUP BY c.name;
     SQL
 
@@ -112,9 +112,9 @@ class CourseData
   def total_hours(track)
     sql = <<~SQL
       SELECT sum(avg_hours) FROM (
-        SELECT round(avg(hours)) AS avg_hours FROM hours
-        JOIN courses ON courses.id = hours.course_id
-        JOIN students ON students.id = hours.student_id
+        SELECT round(avg(hours)) AS avg_hours FROM public.hours
+        JOIN public.courses ON courses.id = hours.course_id
+        JOIN public.students ON students.id = hours.student_id
         WHERE students.track = $1 GROUP BY courses.name ) AS subq;
     SQL
 
