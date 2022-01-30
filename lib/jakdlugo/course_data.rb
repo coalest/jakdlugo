@@ -1,3 +1,4 @@
+require 'pry'
 require "pg"
 require_relative "helpers"
 
@@ -62,8 +63,7 @@ class CourseData
     return if num_tables >= 3
 
     file_path = File.dirname(__FILE__) + "/../../course_data.sql"
-    setup_sql = File.read(file_path)
-    @connection.exec(setup_sql)
+    `psql -d ls_course_data < #{file_path}`
   end
 
   # Wrapper method for database queries
