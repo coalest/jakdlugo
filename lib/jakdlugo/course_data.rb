@@ -1,4 +1,3 @@
-require 'pry'
 require "pg"
 require_relative "helpers"
 
