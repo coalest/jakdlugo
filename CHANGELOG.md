@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+## [0.0.6] - 2022-01-29
+
+- Fix error where the very first command always fails
+
 ## [0.0.5] - 2022-01-29
 
 - Change loading the database from inserts to stdin
