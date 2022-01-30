@@ -2,6 +2,10 @@
 
 ## [0.0.5] - 2022-01-29
 
+- Change loading the database from inserts to stdin
+
+## [0.0.5] - 2022-01-29
+
 - Fix path error if database doesn't exist
 
 ## [0.0.3] - 2022-01-27
