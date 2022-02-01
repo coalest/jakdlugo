@@ -1,6 +1,6 @@
 # Jakdlugo
 
-This gem is a simple command line tool for Launch School students to estimate how long the curriculum will take.
+A simple command line tool for Launch School students to estimate how long the curriculum will take.
 
 ## How it works
 A common question LS students have is "How long does Launch School take?", so there is a post in the forums where students answer how long it took for them. This gem takes the data from that forum post, loads it into a Postgres database and provides a few subcommands that query that database.
