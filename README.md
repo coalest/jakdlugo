@@ -55,8 +55,6 @@ $ howlong -t ruby
  RB100       |       43       |    3.4
  RB101/RB109 |       187      |    14.6
 ...
-...
-...
 ```
 
 ## Installation
@@ -69,9 +67,9 @@ Note: If you use `rbenv` as a Ruby version manager, you may need to run `rbenv r
 
 ## To Do
 
-- [ ] Write tests.
+- [ ] Add tests.
 - [ ] Add feature to estimate remaining number of hours for a student.
-- [ ] Improve the formatting of outputs.
+- [ ] Switch database to SQLite from Postgres for easier installation.
 
 ## Contributing
 
