@@ -144,6 +144,11 @@ class CourseData
             "#{hours.to_s.ljust(9)}|    "\
             "#{percent.to_f}"
     end
+
+    total_hours = course_arr.map { |arr| arr[1] }.reduce(:+).to_s
+
+    puts "-------------|----------------|------------"
+    puts " Total       |       #{total_hours.ljust(9)}|    100"
   end
 
   def display_progress_summary(course, percent)
